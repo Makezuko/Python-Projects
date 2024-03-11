@@ -1,12 +1,12 @@
 def programa():
     try:
         diagonalMaior = float(input('Insira o valor da maior diagonal do paralelogramo em cm: '))
-        if diagonalMaior <= 0:
+        while diagonalMaior <= 0:
             print('Erro! o valor inserido precisa ser positivo.')
             diagonalMaior = float(input('Insira o valor da maior diaginal do paralelogramo em cm: '))
         if diagonalMaior > 0:
             diagonalMenor = float(input('Insira o valor da menor diagonal do paralelogramo em cm: '))
-        if diagonalMenor <= 0:
+        while diagonalMenor <= 0:
             print('Erro! o valor inserido precisa ser positivo.')
             diagonalMenor = float(input('Insira o valor da menor diagonal do paralelogramo em cm: '))
         if diagonalMenor > 0:

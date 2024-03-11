@@ -3,7 +3,7 @@ def programa():
         lados = int(input('Insira a quantidade de lados que o polígono regular possui: '))
         if lados <= 0:
             print('Erro! Você precisa inserir um valor positivo.')
-            lados = int(input('Insira a quantidade de lados que o polígono regular possui: '))
+            programa()
         if lados > 0:
             valor_lados = float(input('Insira o valor de um dos lados do polígono em cm: '))
             while valor_lados <= 0:

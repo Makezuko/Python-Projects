@@ -3,10 +3,10 @@ def programa():
         base = float(input('Insira o valor da base do triângulo em cm: '))
         if base <= 0:
             print('Erro! Você precisa inserir um valor positivo.')
-            base = float(input('Insira o valor da base do triângulo em cm: '))
+            programa()
         if base > 0:
             altura = float(input('Insiria o valor da base do triângulo em cm: '))
-            if altura <= 0:
+            while altura <= 0:
                 print('Erro! Você precisa inserir um valor positivo.')
                 altura = float(input('Insiria o valor da base do triângulo em cm: '))
             if altura > 0:

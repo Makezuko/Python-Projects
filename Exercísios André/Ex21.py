@@ -1,12 +1,12 @@
 def programa():
     try:
         lado = float(input('Insira o valor do lado do um retângulo em cm: '))
-        if lado <= 0:
+        while lado <= 0:
             print('Erro! O valor do lado precisa ser positivo.')
             lado = float(input('Insira o valor do lado do retângulo em cm: '))
         if lado > 0:
             base = float(input('Insira o valor da base do retângulo em cm: '))
-            if base <= 0: 
+            while base <= 0: 
                 print('Erro! O valor do lado precisa ser positivo.')
                 base = float(input('Insira o valor da base do retângulo em cm: '))
             if base > 0:
