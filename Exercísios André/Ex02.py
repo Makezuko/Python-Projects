@@ -1,10 +1,10 @@
 def programa():
     try:
         print('='*75)
-        C = float(input('Insira a temperatura em Celsius que deseja converter a Fahrenheit: '))
+        F = float(input('Insira a temperatura em Fahrenheit que deseja converter a Celsius: '))
         print('='*75)
-        F = (C * 1.8) + 32
-        print('{:.2f}°C são aproximadamente {:.2f}°F'.format(C, F))
+        C = 5/9 *(F-32)
+        print('{:.2f}°F são aproximadamente {:.2f}°C'.format(F, C))
         print('='*75)
     except ValueError:      
         print('='*75)
