@@ -1,4 +1,4 @@
-def programa():
+def programa2():
     try:
         print('='*75)
         F = float(input('Insira a temperatura em Fahrenheit que deseja converter a Celsius: '))
@@ -9,5 +9,5 @@ def programa():
     except ValueError:      
         print('='*75)
         print('Erro! Você precisa inserir uma temperatura em valores numéricos.') 
-        programa()
-programa()
+        programa2()
+    print('='*75)
