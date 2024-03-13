@@ -67,10 +67,10 @@ def programa():
 
 class Temperatura:
 
-    CELSIUS = 0
-    FARENHEIT = 1
-    KELVIN = 2
-    RANKINE = 3
+    CELSIUS = 1
+    FARENHEIT = 2
+    KELVIN = 3
+    RANKINE = 4
 
     def _identidade(X):
         return X
