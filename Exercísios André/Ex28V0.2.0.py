@@ -1,10 +1,17 @@
-temperatura = [0, 1, 2, 3]
+input_possivel = [0, 1, 2, 3]
+
+escalas = {
+    0: '°C',
+    1: '°F',
+    2: '°K',
+    3: '°R'
+}
 
 try:
     print('Celsius (0), Fahrenheit (1), Kelvin (2) ou Rankine (3)')
     matriz_a = int(input('Insira que temperatura você deseja converter: '))
     matriz_b = int(input('Insira a temperatura a qual você deseja converter: '))
-    while matriz_a not in temperatura or matriz_b not in temperatura:
+    while matriz_a not in input_possivel or matriz_b not in input_possivel:
         print('Erro! Você precisa inserir um dos valores pedidos')
         print('Celsius (0), Fahrenheit (1), Kelvin (2) ou Rankine (3)')
         matriz_a = int(input('Insira que temperatura você deseja converter: '))
@@ -12,30 +19,6 @@ try:
     x = float(input('Insira o valor da temperatura a ser convertida: '))
 except ValueError:
     print('Erro! Você precisa inserir valores numéricos')
-
-if matriz_a == 0:
-    escala_a = 'C'
-
-if matriz_a == 1:
-    escala_a = 'F'
-
-if matriz_a == 2:
-    escala_a = 'K' 
-
-if matriz_a == 3:
-    escala_a = 'R' 
-
-if matriz_b == 0:
-    escala_b = 'C' 
-
-if matriz_b == 1:
-    escala_b = 'F' 
-
-if matriz_b == 2:
-    escala_b = 'K' 
-
-if matriz_b == 3:
-    escala_b = 'R'
 
 def _celsiusParaFahrenheit(x):
     return (x * 9/5) + 32
@@ -81,7 +64,7 @@ conversão = [
         [_rankineParaCelsius(x), _rankineParaFahrenheit(x), _rankineParaKelvin(x), 'As Escalas são iguais']            # Rankine
     ]
 try:
-    print('{:.2f}°{} é aproximadamente {:.2f}°{}'.format(x, escala_a, conversão[matriz_a][matriz_b], escala_b))
+    print('{:.2f}{} é aproximadamente {:.2f}{}'.format(x, escalas[matriz_a], conversão[matriz_a][matriz_b], escalas[matriz_b]))
 except ValueError:
     print(conversão[matriz_a][matriz_b])
-    print('{:.2f}°{} é igual a {:.2f}°{}'.format(x, escala_a, x, escala_b))
+    print('{:.2f}{} é igual a {:.2f}{}'.format(x, escalas[matriz_a], x, escalas[matriz_b]))
