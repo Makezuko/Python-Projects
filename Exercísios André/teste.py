@@ -31,7 +31,8 @@ def perimetro_de_trapezio():
                     print('O valor do perímetro deste trapézio é de {}cm'.format(perimetro))
                     break
             except ValueError:
-                print('Erro! Você precisa inserir valores numéricos.')           
+                print('Erro! Você precisa inserir valores numéricos.')    
+
     def isosceles():
         while True:
             try:
@@ -47,6 +48,7 @@ def perimetro_de_trapezio():
                 break
             except ValueError:
                 print('Erro! Você precisa inserir valores numéricos.')
+
     def retangulo():
         while True:
             try:
@@ -63,12 +65,8 @@ def perimetro_de_trapezio():
                     break
             except:
                 print('Erro! Você precisa inserir valores numéricos.')
-    
-    if input_usuario == 0:
-        escaleno()
-    elif input_usuario == 1:
-        isosceles()
-    elif input_usuario == 2:
-        retangulo()
 
+    lista = [escaleno(), isosceles(), retangulo()]
+    
+    lista[input_usuario]
 perimetro_de_trapezio()

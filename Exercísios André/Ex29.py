@@ -40,7 +40,7 @@ def perimetro_de_triangulo():
 def perimetro_de_quadrado():
     while True:
         try:
-            lado = float(input('Insira o valor de um dos lados do quadrado.'))
+            lado = float(input('Insira o valor de um dos lados do quadrado em cm: '))
             if lado <= 0:
                 print('Erro! Distâncias não podem ser nulas ou negativas')
             else:
@@ -138,13 +138,32 @@ def perimetro_de_trapezio():
         isosceles()
     elif input_usuario == 2:
         retangulo()
+
+def perimetro_de_poligono_regular():
+    while True:
+        try:
+            lados = int(input('Insira a quantidade de lados que o polígono regular possui: '))
+            if lados < 3:
+                print('Erro! Para que um polígono exista é necessário que ele tenha pelo menos 3 lados.')
+            valor_lados = float(input('Insira o valor de um dos lados do polígono em cm: '))
+            perimetro = lados * valor_lados
+            print('O valor do perímetro de um polígono regular de {} lados de {:.2f}cm é de {:.2f}cm'.format(lados, valor_lados, perimetro))
+            break
+        except ValueError:
+            print('Erro! Você precisa inserir um valor numérico.')
         
 def perimetro_de_circulo():
     while True:
         try:
-        
+            raio = float(input('Insira o valor do raio do circulo em cm: '))
+            if raio <= 0:
+                print('Erro! Distâncias não podem ser um valor negativo ou nulo.')
+            perimetro = raio * (3.1415 * 2)
+            print('O valor do perimetro de um circulo de raio {:.2f}cm é igual a {}cm'.format(raio, perimetro))
             break
         except ValueError:
             print('Erro! Você precisa inserir um valor numérico.')
 
-        
+lista = [perimetro_de_triangulo, perimetro_de_quadrado, perimetro_de_paralelogramo, perimetro_de_trapezio, perimetro_de_poligono_regular, perimetro_de_circulo]
+exercicio_escolhido = lista[input_exercicio]
+exercicio_escolhido()
