@@ -18,4 +18,6 @@ def arrange():
             if numeros_aleatorios[j] < numeros_aleatorios[menor_indice]:
                 menor_indice = j
         numeros_aleatorios[x], numeros_aleatorios[menor_indice] = numeros_aleatorios[menor_indice], numeros_aleatorios[x]
-        
+
+arrange()
+print(numeros_aleatorios)
