@@ -10,12 +10,12 @@ while True:
         if reta_a <= 0 or reta_b <= 0 or reta_c <= 0:
             linhas()
             print('Erro! Os valores não podem ser negativos ou nulos.')
-        elif reta_a + reta_b > reta_c and reta_b + reta_c > reta_a and reta_a + reta_c > reta_b:
+        elif reta_a + reta_b <= reta_c and reta_b + reta_c <= reta_a and reta_a + reta_c <= reta_b:
             linhas()
-            print('O triângulo existe.')
+            print('O triângulo não existe.')
         else:
             linhas()
-            print('O Triângulo não existe.')
+            print('O Triângulo existe.')
     except ValueError:
         linhas()
         print('Erro! Insira somente valores numéricos.')
