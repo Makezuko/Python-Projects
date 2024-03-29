@@ -16,7 +16,7 @@ while True:
         elif delta == 0:
             linhas()
             raiz = -b / (2*a)
-            print('A equação possui uma única raiz, {}'.format(raiz))
+            print('A equação possui uma única raiz, {:.2f}'.format(raiz))
         else:
             linhas()
             raiz_a = (-b + math.sqrt(delta)) / (2*a)  
