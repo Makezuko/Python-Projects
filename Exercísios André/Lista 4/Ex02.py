@@ -19,5 +19,4 @@ for c in range(5):
     soma = soma + lista[0]
     lista.pop(0)
 
-media = soma/2
-print('A média da lista é {}'.format(media))  
+print('A média da lista é {}'.format(soma/2))  
