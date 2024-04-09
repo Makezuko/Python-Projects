@@ -1,4 +1,5 @@
 lista = []
+soma = 0
 
 for c in range(5):
     while True:
@@ -14,13 +15,9 @@ for c in range(5):
 
 print('Os números analisados serão: {}'.format(lista))
 
-while len(lista) > 1:
-    try:
-        if lista[0] > lista[1]: 
-            lista.pop(0)
-        if lista[1] > lista[0]:         
-            lista.pop(1)
-    except IndexError:
-        break
+for c in range(5):
+    soma = soma + lista[0]
+    lista.pop(0)
 
-print('O menor número da lista é {}'.format(lista[0]))  
+media = soma/2
+print('A média da lista é {}'.format(media))  

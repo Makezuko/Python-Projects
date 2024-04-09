@@ -12,7 +12,7 @@ for c in range(5):
         except ValueError:
             print('Erro! Você precisa inserir valores numéricos')
 
-print('Os números analisados serão: {}'.format(lista))
+print('Os números analisados serão: {:.2}'.format(lista))
 
 while len(lista) > 1:
     try:
