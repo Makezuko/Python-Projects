@@ -15,8 +15,8 @@ for c in range(5):
 
 print('Os números analisados serão: {}'.format(lista))
 
-for c in range(5):
+while len(lista) > 0:
     soma = soma + lista[0]
     lista.pop(0)
 
-print('A soma dos numeros na lista é {}'.format(soma))  
+print('A soma dos numeros na lista é {}'.format(soma))
