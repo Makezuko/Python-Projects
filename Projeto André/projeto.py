@@ -7,7 +7,7 @@ def apresenteSe ():
     print('| Kauê Farias (24788788)                                      |')
     print('| Rafael Zorzetto (22008059)                                  |')
     print('|                                                             |')
-    print('| Versão 2.0 de 12/abril/2024                                 |')
+    print('| Versão 2.0 de 05/maio/2024                                 |')
     print('|                                                             |')
     print('+-------------------------------------------------------------+')
 
